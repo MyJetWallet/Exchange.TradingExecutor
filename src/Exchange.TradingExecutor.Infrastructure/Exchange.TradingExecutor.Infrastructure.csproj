@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.Net.Client" Version="2.40.0" />
+        <PackageReference Include="MyCrm.Calendar.ServiceBus" Version="1.0.0" />
+        <PackageReference Include="MyCrm.Comments.GrpcContracts" Version="1.0.5" />
+        <PackageReference Include="MyJetWallet.Service.Exchange.Balances.Client" Version="1.0.6" />
+        <PackageReference Include="Polly" Version="7.2.2" />
+        <PackageReference Include="protobuf-net.Grpc" Version="1.0.152" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="5.1.0" />
+        <PackageReference Include="Service.Exchange.Sdk" Version="1.0.5" />
+        <PackageReference Include="SimpleTrading.PersonalData.ServiceBus" Version="1.0.14" />
+        <PackageReference Include="SimpleTrading.Postgres" Version="1.0.83" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Exchange.TradingExecutor.Core\Exchange.TradingExecutor.Core.csproj" />
+    </ItemGroup>
+</Project>

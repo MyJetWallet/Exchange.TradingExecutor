@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.TradingExecutor", "src\Exchange.TradingExecutor\Exchange.TradingExecutor.csproj", "{D0FC69B9-D388-4ABD-9085-A0541E996524}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.TradingExecutor.Core", "src\Exchange.TradingExecutor.Core\Exchange.TradingExecutor.Core.csproj", "{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.TradingExecutor.Grpc", "src\Exchange.TradingExecutor.Grpc\Exchange.TradingExecutor.Grpc.csproj", "{FFF2ABF4-2FB3-454B-884E-31CE550E3440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.TradingExecutor.ServiceBus", "src\Exchange.TradingExecutor.ServiceBus\Exchange.TradingExecutor.ServiceBus.csproj", "{9B729C33-80C0-4D5B-918A-5E187482473E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.TradingExecutor.Infrastructure", "src\Exchange.TradingExecutor.Infrastructure\Exchange.TradingExecutor.Infrastructure.csproj", "{5BE0EF61-A856-4EAD-9E74-7E97575653C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0FC69B9-D388-4ABD-9085-A0541E996524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FC69B9-D388-4ABD-9085-A0541E996524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FC69B9-D388-4ABD-9085-A0541E996524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FC69B9-D388-4ABD-9085-A0541E996524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D065F6-9873-4FB0-9B61-5FA078CBE060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D065F6-9873-4FB0-9B61-5FA078CBE060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D065F6-9873-4FB0-9B61-5FA078CBE060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D065F6-9873-4FB0-9B61-5FA078CBE060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E586CA-0042-4C98-AF3E-8864F374684B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E586CA-0042-4C98-AF3E-8864F374684B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E586CA-0042-4C98-AF3E-8864F374684B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E586CA-0042-4C98-AF3E-8864F374684B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF2ABF4-2FB3-454B-884E-31CE550E3440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF2ABF4-2FB3-454B-884E-31CE550E3440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF2ABF4-2FB3-454B-884E-31CE550E3440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF2ABF4-2FB3-454B-884E-31CE550E3440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B729C33-80C0-4D5B-918A-5E187482473E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B729C33-80C0-4D5B-918A-5E187482473E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B729C33-80C0-4D5B-918A-5E187482473E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B729C33-80C0-4D5B-918A-5E187482473E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE0EF61-A856-4EAD-9E74-7E97575653C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE0EF61-A856-4EAD-9E74-7E97575653C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE0EF61-A856-4EAD-9E74-7E97575653C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE0EF61-A856-4EAD-9E74-7E97575653C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BE7A607-F7FC-473F-8E32-F56A49CE5908}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0FC69B9-D388-4ABD-9085-A0541E996524} = {876792E9-6DA3-437E-A3C9-4CCF583ECE6F}
+		{22A5CBC1-6DE5-4A74-B84F-B12808EE6FFD} = {876792E9-6DA3-437E-A3C9-4CCF583ECE6F}
+	EndGlobalSection
+EndGlobal
