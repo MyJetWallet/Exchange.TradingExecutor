@@ -5,6 +5,8 @@ using Exchange.TradingExecutor.Core.Common.Interfaces;
 using Exchange.TradingExecutor.Core.Common.Models;
 using Exchange.TradingExecutor.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using MyJetWallet.Sdk.Service;
 using MyServiceBus.Abstractions;
 using MyServiceBus.TcpClient;
 using Serilog;
@@ -17,7 +19,7 @@ namespace Exchange.TradingExecutor
     public static class ServiceBinder
     {
         public static void AddServices(this IServiceCollection services, SettingsModel settings)
-        { 
+        {
             services.AddMarkedBy<IStartableService>(ServiceLifetime.Singleton, typeof(ServiceBinder).Assembly);
             services.AddServiceBus(settings);
             services.AddCore(settings);

@@ -4,6 +4,8 @@ using Exchange.TradingExecutor.Core.Common.Models;
 using Exchange.TradingExecutor.Infrastructure.Common;
 using Exchange.TradingExecutor.Infrastructure.JetWallet;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using MyJetWallet.Sdk.Service;
 using Serilog;
 using Service.Exchange.Balances.Client;
 using Service.Exchange.Balances.Grpc;
@@ -14,13 +16,9 @@ namespace Exchange.TradingExecutor.Infrastructure
     {
         public static void AddInfrastructure(this IServiceCollection services, SettingsModel settings)
         {
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .Enrich.WithProperty("AppName", settings.AppName)
-                .WriteTo.Seq(settings.SeqUrl)
-                .WriteTo.Console()
-                .CreateLogger();
-            services.AddLogging(s => s.AddSerilog());
+            var loggerFactory = LogConfigurator.Configure(settings.AppName, settings.SeqUrl);
+            services.AddSingleton(loggerFactory);
+            services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
 
             services.AddGrpcServices(settings);
             services.AddRepositories(settings);
