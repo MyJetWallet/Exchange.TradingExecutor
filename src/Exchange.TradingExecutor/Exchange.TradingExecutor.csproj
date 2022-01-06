@@ -24,4 +24,10 @@
       <ProjectReference Include="..\Exchange.TradingExecutor.ServiceBus\Exchange.TradingExecutor.ServiceBus.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Dockerfile">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
