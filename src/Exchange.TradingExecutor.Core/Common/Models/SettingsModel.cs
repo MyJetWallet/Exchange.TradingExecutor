@@ -6,13 +6,13 @@ namespace Exchange.TradingExecutor.Core.Common.Models
     {
         public string AppName { get; set; } = "TradingExecutor";
 
-        [YamlProperty("TradingExecutor.ServiceBusHostPort")]
+        [YamlProperty("TradingExecutor.SpotServiceBusHostPort")]
         public string ServiceBusHostPort { get; set; }
 
-        [YamlProperty("TradingExecutor.SeqUrl")]
+        [YamlProperty("TradingExecutor.SeqServiceUrl")]
         public string SeqUrl { get; set; }
 
-        [YamlProperty("TradingExecutor.JetWalletExchangeGrpcServiceUrl")]
+        [YamlProperty("TradingExecutor.BalanceServiceGrpcServiceUrl")]
         public string JetWalletExchangeGrpcServiceUrl { get; set; }
     }
 }
