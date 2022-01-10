@@ -12,13 +12,13 @@ namespace StatelessTradingExecutor.ServiceBus.ClosePositionCommands
         public ClosePositionCommandSbPublisher(MyServiceBusTcpClient client)
         {
             _client = client;
-            _client.CreateTopicIfNotExists(TopicNames.ClosePositionCommands);
+            _client.CreateTopicIfNotExists(TopicNames.ClosePositionCommand);
         }
  
         public ValueTask PublishAsync(ClosePositionSbCommand contract)
         {
             var bytesToSend = contract.ServiceBusContractToByteArray();
-            var task = _client.PublishAsync(TopicNames.ClosePositionCommands, bytesToSend, false);
+            var task = _client.PublishAsync(TopicNames.ClosePositionCommand, bytesToSend, false);
             
             return new ValueTask(task);
         }

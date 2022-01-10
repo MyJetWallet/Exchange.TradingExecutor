@@ -9,7 +9,7 @@ namespace StatelessTradingExecutor.ServiceBus.OpenPositionCommands
     {
         public OpenPositionCommandSbSubscriber(MyServiceBusTcpClient client, string queueName, TopicQueueType type,
             bool isChunk) :
-            base(client, TopicNames.OpenPositionCommands, queueName, type,
+            base(client, TopicNames.OpenPositionCommand, queueName, type,
                 bytes => bytes.ByteArrayToServiceBusContract<OpenPositionSbCommand>(), isChunk)
         {
         }

@@ -12,13 +12,13 @@ namespace StatelessTradingExecutor.ServiceBus.OpenPositionCommands
         public OpenPositionCommandSbPublisher(MyServiceBusTcpClient client)
         {
             _client = client;
-            _client.CreateTopicIfNotExists(TopicNames.OpenPositionCommands);
+            _client.CreateTopicIfNotExists(TopicNames.OpenPositionCommand);
         }
  
         public ValueTask PublishAsync(OpenPositionSbCommand contract)
         {
             var bytesToSend = contract.ServiceBusContractToByteArray();
-            var task = _client.PublishAsync(TopicNames.OpenPositionCommands, bytesToSend, false);
+            var task = _client.PublishAsync(TopicNames.OpenPositionCommand, bytesToSend, false);
             
             return new ValueTask(task);
         }

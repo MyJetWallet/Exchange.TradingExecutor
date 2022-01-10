@@ -9,7 +9,7 @@ namespace StatelessTradingExecutor.ServiceBus.ClosePositionCommands
     {
         public ClosePositionCommandSbSubscriber(MyServiceBusTcpClient client, string queueName, TopicQueueType type,
             bool isChunk) :
-            base(client, TopicNames.ClosePositionCommands, queueName, type,
+            base(client, TopicNames.ClosePositionCommand, queueName, type,
                 bytes => bytes.ByteArrayToServiceBusContract<ClosePositionSbCommand>(), isChunk)
         {
         }

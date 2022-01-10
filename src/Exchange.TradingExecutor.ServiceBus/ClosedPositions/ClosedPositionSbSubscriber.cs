@@ -9,7 +9,7 @@ namespace StatelessTradingExecutor.ServiceBus.ClosedPositions
     {
         public ClosedPositionSbSubscriber(MyServiceBusTcpClient client, string queueName, TopicQueueType type,
             bool isChunk) :
-            base(client, TopicNames.ClosedPositions, queueName, type,
+            base(client, TopicNames.ClosedPosition, queueName, type,
                 bytes => bytes.ByteArrayToServiceBusContract<ClosedPositionSbModel>(), isChunk)
         {
         }
