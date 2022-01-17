@@ -2,7 +2,7 @@
 using Exchange.TradingExecutor.Core.Balance;
 using Exchange.TradingExecutor.Core.Common.Models;
 using Exchange.TradingExecutor.Infrastructure.Common;
-using Exchange.TradingExecutor.Infrastructure.JetWallet;
+using Exchange.TradingExecutor.Infrastructure.Spot;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MyJetWallet.Sdk.Service;
@@ -31,13 +31,13 @@ namespace Exchange.TradingExecutor.Infrastructure
 
         private static void AddServices(this IServiceCollection services, SettingsModel settings)
         {
-            services.AddSingleton<IBalanceService, JetWalletBalanceService>();
+            services.AddSingleton<IBalanceService, SpotBalanceService>();
         }
 
         private static void AddGrpcServices(this IServiceCollection services, SettingsModel settings)
         {
             services.AddSingleton<GrpcRetryPolicy>();
-            var factory = new ExchangeBalancesClientFactory(settings.JetWalletExchangeGrpcServiceUrl);
+            var factory = new ExchangeBalancesClientFactory(settings.SpotBalanceOperationGrpcServiceUrl);
             services.AddSingleton<IBalanceOperationService>(factory.GetBalanceOperationService());
         }
     }

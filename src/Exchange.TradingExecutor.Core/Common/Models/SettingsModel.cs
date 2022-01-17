@@ -13,6 +13,6 @@ namespace Exchange.TradingExecutor.Core.Common.Models
         public string SeqUrl { get; set; }
 
         [YamlProperty("TradingExecutor.BalanceServiceGrpcServiceUrl")]
-        public string JetWalletExchangeGrpcServiceUrl { get; set; }
+        public string SpotBalanceOperationGrpcServiceUrl { get; set; }
     }
 }

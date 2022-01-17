@@ -6,14 +6,14 @@ using Exchange.TradingExecutor.Infrastructure.Common;
 using Service.Exchange.Balances.Grpc;
 using Service.Exchange.Sdk.Messages;
 
-namespace Exchange.TradingExecutor.Infrastructure.JetWallet
+namespace Exchange.TradingExecutor.Infrastructure.Spot
 {
-    public class JetWalletBalanceService : IBalanceService
+    public class SpotBalanceService : IBalanceService
     {
         private readonly IBalanceOperationService _balanceOperationService;
         private readonly GrpcRetryPolicy _grpcRetryPolicy;
 
-        public JetWalletBalanceService(
+        public SpotBalanceService(
             IBalanceOperationService balanceOperationService,
             GrpcRetryPolicy grpcRetryPolicy
         )
